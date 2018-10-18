@@ -2240,7 +2240,7 @@ proc vTclWindow.top44 {base} {
     vTcl:toplevel $top -class Toplevel \
 		-menu "$top.m47" -highlightcolor black 
     wm focusmodel $top passive
-    wm geometry $top 678x604+393+69; update
+    wm geometry $top 678x604+138+53; update
     wm maxsize $top 1351 738
     wm minsize $top 1 1
     wm overrideredirect $top 0
@@ -2546,18 +2546,6 @@ activate_frame Button1 Entrydensity     True} \
 		-value 0.002 -variable solventtype \
 		-command {set ::SolventClust::density $solventtype} \
 		-label {PHE - 0.002} 
-    $site_5_0.men69.m add radiobutton \
-		-value 0.0334 -variable solventtype \
-		-command {set ::SolventClust::density $solventtype} \
-		-label {WAT - 0.0334} 
-    $site_5_0.men69.m add radiobutton \
-		-value 0.0564 -variable solventtype \
-		-command {set ::SolventClust::density $solventtype} \
-		-label {ETA - 0.0564} 
-    $site_5_0.men69.m add radiobutton \
-		-value 0.002 -variable solventtype \
-		-command {set ::SolventClust::density $solventtype} \
-		-label {PHE - 0.002} 
     radiobutton $site_5_0.cpd70 \
 		-activebackground {#f9f9f9} -activeforeground black \
 		-command {activate_frame Button1 menudensity True
@@ -2725,9 +2713,7 @@ activate_frame Button1 Entrydensity      False} \
     vTcl:DefineAlias "$site_4_1.scr67" "ScrolledWindow3" vTcl:WidgetProc "Toplevel1" 1
     ListBox $site_4_1.scr67.f.lis46 \
 		-background white -highlightcolor black -selectbackground {#c4c4c4} \
-		-selectforeground black \
-		-xscrollcommand {ScrolledWindow::_set_hscroll .top44.not45.fpage2.scr67} \
-		-yscrollcommand {ScrolledWindow::_set_vscroll .top44.not45.fpage2.scr67} 
+		-selectforeground black 
     vTcl:DefineAlias "$site_4_1.scr67.f.lis46" "ListBox1" vTcl:WidgetProc "Toplevel1" 1
     bind $site_4_1.scr67.f.lis46 <Configure> {
         ListBox::_resize  %W
@@ -2857,7 +2843,7 @@ activate_frame Button1 Entrydensity      False} \
     # SETTING GEOMETRY
     ###################
     place $top.not45 \
-		-in $top -x 10 -y 135 -width 659 -height 429 -anchor nw \
+		-in $top -x 10 -y 140 -width 659 -height 429 -anchor nw \
 		-bordermode ignore 
     place $top.cpd47 \
 		-in $top -x 0 -y 0 -width 658 -height 24 -anchor nw \
